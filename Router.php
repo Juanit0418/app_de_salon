@@ -29,6 +29,7 @@ class Router
         // $auth = $_SESSION['login'] ?? null;
 
         $url_actual = strtok($_SERVER['REQUEST_URI'], '?') ?? '/';
+        $url_actual = str_replace('/public', '', $url_actual);
         $method = $_SERVER["REQUEST_METHOD"];
 
         if ($method === 'GET') {
