@@ -1,0 +1,23 @@
+{
+    "name": "juansanmartn/appsalon_php_mvc_js_sass",
+    "description": "proyecto appsalon",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "MVC\\": "./",
+            "Controller\\": "./Controllers",
+            "Model\\": "./models",
+            "Clases\\": "./clases"
+        }
+    },
+    "authors": [
+        {
+            "name": "Juan Sanmartin",
+            "email": "juansanmartin120499@gmail.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.10",
+        "vlucas/phpdotenv": "^5.6"
+    }
+}

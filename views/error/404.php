@@ -1,0 +1,1 @@
+<h1 class="nombre_pagina">Error 404! Pagina no encontrada</h1>

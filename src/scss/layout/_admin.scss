@@ -1,0 +1,42 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.citas {
+    list-style: none;
+    padding: 0;
+    
+    li {
+        padding: 2rem;
+        border-top: 1px solid v.$gris;
+        &:last-child {
+            border-bottom: 1px solid v.$gris;
+        }
+        
+        h3, p {
+            text-align: left;
+            span {
+                color: v.$azul;
+                font-weight: bold;
+            }
+        }
+    }
+
+    @include m.tablet{
+        @include m.grid(2, 2rem);
+    }
+
+    @include m.pc{
+        @include m.grid(3, 2rem);
+    }
+}
+
+.servicios {
+    @extend .citas;
+
+    .acciones {
+        .boton_1,
+        .boton_eliminar {
+            margin: 1rem;
+        }
+    }
+}

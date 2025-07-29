@@ -1,0 +1,64 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.contenedor_app {
+    @include m.tablet {
+        @include m.grid(2, 2rem);
+        min-height: 100vh;
+    }
+
+    .imagen {
+        background-image: url("../img/1.jpg");
+        background-size: cover;
+        background-position: center center;
+        height: 20rem;
+        @include m.tablet {
+            height: auto;
+        }
+    }
+
+    .app {
+        width: 95%;
+        margin: 0 auto;
+        padding: 3rem 0;
+    }
+
+    .nombre:pagina {
+        text-align: center;
+        margin: 5rem 0;
+        font-weight: v.$bold;
+    }
+
+    .descripcion_pagina {
+        text-align: center;
+    }
+}
+
+.barra {
+    @include m.celular {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .boton {
+        @include m.boton(block, v.$negro, v.$blanco);
+    }
+}
+
+.app {
+        width: 95%;
+        margin: 0 auto;
+        padding: 3rem 0;
+    }
+
+.barra_servicios {
+    @include m.celular {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .boton {
+        @include m.boton(block, v.$azul, v.$blanco);
+        margin: 0 0 1rem 0;
+    }
+}

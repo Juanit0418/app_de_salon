@@ -1,0 +1,14 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.boton{
+    @include m.boton(inline-block, v.$azul, v.$blanco);
+}
+
+.boton_1 {
+    @include m.boton1(block, v.$verde, v.$blanco)
+}
+
+.boton_eliminar {
+    @include m.boton1(block, v.$rojo, v.$blanco)
+}
